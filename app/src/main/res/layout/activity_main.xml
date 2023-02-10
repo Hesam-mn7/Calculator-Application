@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#000"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rl1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border_edittext"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tventer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    app:layout_constraintBottom_toTopOf="@id/tvresult"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvresult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tventer"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tventer" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/buttonC"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shapr_button_c"
+                    android:textColor="#000"
+                    android:textSize="45sp"
+                    android:text="C"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:onClick="onclickC"/>
+                <Button
+                    android:id="@+id/button"
+                    style="@style/buttonOperator"
+                    android:text="%"
+                    android:onClick="onclickdarsad"/>
+
+                <Button
+                    android:id="@+id/buttonnn"
+                    style="@style/buttonOperator"
+                    android:text="+/-"
+                    android:onClick="onclickalamat"/>
+                <Button
+                    android:id="@+id/buttondiv"
+                    style="@style/buttonOperator"
+                    android:text="/"
+                    android:onClick="onclickOperator"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll1">
+
+                <Button
+                    android:id="@+id/button1"
+                    style="@style/buttonNumber"
+                    android:text="1"
+                    android:onClick="onclickNumber"/>
+
+                <Button
+                    android:id="@+id/button2"
+                    style="@style/buttonNumber"
+                    android:text="2"
+                    android:onClick="onclickNumber"/>
+
+                <Button
+                    android:id="@+id/button3"
+                    style="@style/buttonNumber"
+                    android:text="3"
+                    android:onClick="onclickNumber"/>
+
+                <Button
+                    android:id="@+id/buttonmul"
+                    style="@style/buttonOperator"
+                    android:text="*"
+                    android:onClick="onclickOperator"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll2">
+
+
+                <Button
+                    android:id="@+id/button4"
+                    style="@style/buttonNumber"
+                    android:text="4"
+                    android:onClick="onclickNumber"/>
+
+                <Button
+                    android:id="@+id/button5"
+                    style="@style/buttonNumber"
+                    android:text="5"
+                    android:onClick="onclickNumber"/>
+
+                <Button
+                    android:id="@+id/button6"
+                    style="@style/buttonNumber"
+                    android:text="6"
+                    android:onClick="onclickNumber"/>
+                <Button
+                    android:id="@+id/buttonsub"
+                    style="@style/buttonOperator"
+                    android:text="-"
+                    android:onClick="onclickOperator"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll3">
+
+
+                <Button
+                    android:id="@+id/button7"
+                    style="@style/buttonNumber"
+                    android:text="7"
+                    android:onClick="onclickNumber"/>
+
+                <Button
+                    android:id="@+id/button8"
+                    style="@style/buttonNumber"
+                    android:text="8"
+                    android:onClick="onclickNumber"/>
+
+                <Button
+                    android:id="@+id/button9"
+                    style="@style/buttonNumber"
+                    android:text="9"
+                    android:onClick="onclickNumber"/>
+
+                <Button
+                    android:id="@+id/buttonadd"
+                    style="@style/buttonOperator"
+                    android:text="+"
+                    android:onClick="onclickOperator"/>
+
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/ll4">
+
+            <Button
+                android:id="@+id/button10"
+                style="@style/buttonNumber"
+                android:text="."
+                android:onClick="onclickNumber"/>
+            <Button
+                android:id="@+id/button0"
+                style="@style/buttonNumber"
+                android:text="0"
+                android:onClick="onclickNumber"/>
+
+
+            <ImageView
+                android:id="@+id/buttonback"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:padding="20dp"
+                android:background="@drawable/shapr_button"
+                android:src="@drawable/ic_baseline_backspace_24"
+                android:onClick="onclickBack"
+                />
+            <Button
+                android:id="@+id/buttoneql"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/shapr_button_mosavi"
+                android:text="="
+                android:textColor="#000"
+                android:textSize="45sp"
+                android:onClick="onclickEquals"
+                />
+
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
